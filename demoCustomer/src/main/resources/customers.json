@@ -1,0 +1,14 @@
+{
+  "customers": [{
+    "id": 1,
+    "firstname": "Bill",
+    "lastname": "Clark",
+    "email": "bill.clark@gmail.com"
+  },
+    {
+      "id": 2,
+      "firstname": "Claire",
+      "lastname": "Reader",
+      "email": "clareader@gmail.com"
+    }]
+}
