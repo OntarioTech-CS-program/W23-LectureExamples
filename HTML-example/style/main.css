@@ -1,0 +1,38 @@
+body{
+	font-family: Verdana;
+}
+
+.large-image{
+	width: 250px;
+	height: auto;
+	float: right;
+}
+
+#header h1{
+	float:left;
+}
+
+#header{
+	height: 50px;
+}
+
+#article{
+	margin: 100px;
+}
+
+.dbcol{
+	 display: flex; /* equal height of the children */
+	 column-gap: 10em;
+}
+
+.col {
+  flex: 1; /* additionally, equal width */
+  
+  padding-top: 1em;
+  padding-right: 10em;
+  border: solid;
+}
+
+#video2{
+	background-color: yellow;
+}
