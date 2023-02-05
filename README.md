@@ -20,4 +20,6 @@ This demo is associated with the videos posted on Module 3.
 
 ## HTML-example
 
+Basic HTML project directory structure, without IntelliJ.
+
 This folder contains the demo produced in the Module 4 Part 1 and Part 2 videos.
