@@ -9,6 +9,7 @@ import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.core.Response;
 
 import static com.example.util.CustomerUtility.*;
 
@@ -32,7 +33,7 @@ public class CustomerResource {
 
     @GET
     @Produces("application/json")
-    public String getAllCustomers() {
+    public Response getAllCustomers() {
         loadResource();
         String val = "Problem";
         try {
@@ -40,7 +41,12 @@ public class CustomerResource {
         } catch (JsonProcessingException e) {
             throw new RuntimeException(e);
         }
-        return val;
+        Response myResp = Response.status(200).header("Access-Control-Allow-Origin", "http://localhost:8448")
+                .header("Content-Type", "application/json")
+                .entity(val)
+                .build();
+
+        return myResp;
     }
 
     @GET

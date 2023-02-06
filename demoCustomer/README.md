@@ -1,0 +1,1 @@
+This project got updated to demoCustomer-Module4; to deploy you must access the url "http://localhost:8080/demoCustomer-Module4-1.0-SNAPSHOT/api/customers".
