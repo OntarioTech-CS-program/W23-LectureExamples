@@ -29,3 +29,8 @@ This folder contains the demo produced in the Module 4 Part 1 and Part 2 videos.
 HTML client that create a table with the data from a JSON object. It calls the **modified** demoCustomer server API.
 
 This folder contains the demo produced in the Module 4 Part 3 and Part 4 videos.
+
+## Lecture Activity [Feb 6 and 7] - CanvasAnimation
+This is the demo activity for creating an HTML Canvas sprite animation.
+
+> This demo was reproduced from the tutorial: https://mr-easy.github.io/2017-06-26-creating-spritesheet-animation-in-html5-canvas-using-javascript/
