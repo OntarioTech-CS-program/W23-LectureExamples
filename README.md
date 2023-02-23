@@ -34,3 +34,12 @@ This folder contains the demo produced in the Module 4 Part 3 and Part 4 videos.
 This is the demo activity for creating an HTML Canvas sprite animation.
 
 > This demo was reproduced from the tutorial: https://mr-easy.github.io/2017-06-26-creating-spritesheet-animation-in-html5-canvas-using-javascript/
+
+## Module 5a - ParsingFiles (Server)
+Example parsers 
+- `ExampleParser` Java class demontrated in week 6 of the lecture.
+- `BookParser` Java class demontrated in Module 5 videos part 1 and 2.
+  > More about the Gutenberg project: https://www.gutenberg.org/
+
+## Module 5b - wordcloud (Client)
+HTML Client that fetches a list of words and their frequencies from the ParsingFiles server; then displays them in a WordCloud visualization using [WordCloud2](https://github.com/timdream/wordcloud2.js). 
