@@ -10,7 +10,10 @@ function requestData(callURL){
     },
   })
     .then(response => response.json())
-    .then(response => processDataToList(response));
+    .then(response => processDataToList(response))
+    .catch(error => {
+      console.log(error)
+    });;
 }
 
 
@@ -33,4 +36,30 @@ function processDataToList(data){
   let apiCallURL = "http://localhost:8080/ParsingFiles-1.0-SNAPSHOT/api/read/book";
   requestData(apiCallURL);
 
+
 })();
+
+function postData(url, data){
+  fetch(url, {
+    mode: 'no-cors', //not recommended in "real" life
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'text/plain'
+    },
+    body:data
+  })
+    .then(response => console.log(response))
+    .catch(error => {
+      console.log(error)
+    });
+}
+
+function saveFile(){
+  let postURL = "http://localhost:8080/ParsingFiles-1.0-SNAPSHOT/api/read/save";
+  let content = document.getElementById('data');
+  let title = document.getElementById('name');
+  let myData = {"title": title.value, "content": content.value};
+  // posting to the server
+  postData(postURL, JSON.stringify(myData));
+}

@@ -1,16 +1,15 @@
 package com.example.parsingfiles;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import jakarta.ws.rs.GET;
-import jakarta.ws.rs.Path;
-import jakarta.ws.rs.PathParam;
-import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.Response;
 
 import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.util.HashMap;
 import java.util.Map;
 
 
@@ -81,6 +80,34 @@ public class HelloResource {
                 .build();
 
     return myResp;
+    }
+
+    @POST
+    @Consumes("text/plain")
+    @Path("/save")
+    public Response save(String content) throws IOException {
+        Map<String, Object> result = mapper.readValue(content, HashMap.class);
+
+        String title = (String) result.get("title");
+        String body = (String) result.get("content");
+
+        URL url = this.getClass().getClassLoader().getResource("/records");
+        File data = null;
+        try {
+            data = new File(url.toURI());
+        } catch (URISyntaxException e) {
+            throw new RuntimeException(e);
+        }
+
+        ExampleWriter myWriter = new ExampleWriter();
+        myWriter.createFile(data, title, body);
+
+        Response myResp = Response.status(200).header("Access-Control-Allow-Origin", "http://localhost:8448")
+                .header("Content-Type", "application/json")
+                .build();
+
+        return myResp;
+
     }
 
 }
