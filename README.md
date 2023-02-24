@@ -38,8 +38,12 @@ This is the demo activity for creating an HTML Canvas sprite animation.
 ## Module 5a - ParsingFiles (Server)
 Example parsers 
 - `ExampleParser` Java class demontrated in week 6 of the lecture.
-- `BookParser` Java class demontrated in Module 5 videos part 1 and 2.
+- `BookParser` Java class demontrated in Module 5 videos part 1 and 2. Created the endpoint `/book` that parses files in the `documents` directory.
   > More about the Gutenberg project: https://www.gutenberg.org/
+- `ExampleWriter` Java class to create and write content to a new file in the server-side. Also, created a new endpoint to `/save` using a `POST` request.
+
 
 ## Module 5b - wordcloud (Client)
-HTML Client that fetches a list of words and their frequencies from the ParsingFiles server; then displays them in a WordCloud visualization using [WordCloud2](https://github.com/timdream/wordcloud2.js). 
+ - HTML Client that fetches a list of words and their frequencies from the ParsingFiles server; then displays them in a WordCloud visualization using [WordCloud2](https://github.com/timdream/wordcloud2.js). 
+ - From Part 3 video, this was modified to include text inputs and send a POST request to the server.
+
