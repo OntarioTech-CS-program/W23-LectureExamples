@@ -47,3 +47,5 @@ Example parsers
  - HTML Client that fetches a list of words and their frequencies from the ParsingFiles server; then displays them in a WordCloud visualization using [WordCloud2](https://github.com/timdream/wordcloud2.js). 
  - From Part 3 video, this was modified to include text inputs and send a POST request to the server.
 
+## Module 6 - SocketDemo
+- Java class `BookData` created during the lecture in week 7. We used `URLConnection` to get a stream with the api data, then we parse it using the `org.json` library.
