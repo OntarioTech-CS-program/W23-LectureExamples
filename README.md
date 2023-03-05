@@ -49,3 +49,6 @@ Example parsers
 
 ## Module 6 - SocketDemo
 - Java class `BookData` created during the lecture in week 7. We used `URLConnection` to get a stream with the api data, then we parse it using the `org.json` library.
+- Java class `BikeShare` demo video. Used `URLConnetion` and `DocumentBuilder` to parse an `XML` document. Process will be similar to parsing a `HTML` object too.
+  - Loaded the `XML` data from the mock API: `https://api.mockaroo.com/api/e9cc2e00?count=20&key=e99c5530`
+
